@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Layout from '../components/Layout';
@@ -7,7 +8,13 @@ import NotFound from '../containers/NotFound';
 
 import routes from './index';
 
-const App = () => {
+import { getInitialState } from '../actions';
+
+const App = ({ getInitialState }) => {
+
+  useEffect(() => {
+    getInitialState();
+  }, [getInitialState]);
 
   return (
     <Router>
@@ -23,4 +30,8 @@ const App = () => {
   )
 };
 
-export default App;
+const mapDispatchToProps = {
+  getInitialState,
+}
+
+export default connect(null, mapDispatchToProps)(App);
