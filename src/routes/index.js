@@ -8,12 +8,6 @@ const routes = [
     exact: true,
     title: "Home",
   },
-  {
-    path: '/tasks',
-    component: Tasks,
-    exact: true,
-    title: "Tasks",
-  },
 ];
 
 export default routes;
