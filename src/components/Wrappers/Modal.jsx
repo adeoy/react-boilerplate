@@ -25,7 +25,7 @@ const Modal = ({
       <ModalBody>{children}</ModalBody>
       <ModalFooter>
         <Button color="primary" onClick={submit} disabled={!submitEnable}>
-        <FontAwesomeIcon icon={faSave} /> {submitTitle}
+          <FontAwesomeIcon icon={faSave} /> {submitTitle}
         </Button>{" "}
         <Button color="secondary" onClick={toggle}>
           <FontAwesomeIcon icon={faTimesCircle} /> Cancelar
